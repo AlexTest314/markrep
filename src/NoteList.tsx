@@ -45,7 +45,7 @@ export function NoteList({ availableTags, notes, onUpdateTag, onDeleteTag }: Not
 			</Col>
 			<Col xs="auto">
 				<Stack gap={2} direction="horizontal">
-					<Link to="https://new">
+					<Link to="/new">
 						<Button variant="primary">Create</Button>
 					</Link>
 					<Button onClick={() => setEditTagsModalIsOpen(true)} variant="outline-secondary">Edit Tags</Button>
@@ -95,7 +95,7 @@ export function NoteList({ availableTags, notes, onUpdateTag, onDeleteTag }: Not
 }
 
 function NoteCard({ id, title, tags }: SimplefiedNote) {
-	return <Card as={Link} to={`https://${id}`} className={`h-1000 text-reset text-decoration-none ${styles.card}`}>
+	return <Card as={Link} to={`/${id}`} className={`h-1000 text-reset text-decoration-none ${styles.card}`}>
 		<Card.Body>
 			<Stack gap={2} className='align-items-center justify-content-center h-100'>
 				<span className="fs-5 ">{title}</span>

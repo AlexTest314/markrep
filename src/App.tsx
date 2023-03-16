@@ -97,9 +97,9 @@ function App() {
   return (
     <Container className='my-4'>
       <Routes>
-        <Route path='https://' element={<NoteList notes={notesWithTags} availableTags={tags} onUpdateTag={updateTag} onDeleteTag={deleteTag} />} />
-        <Route path='https://new' element={<NewNote onSubmit={onCreateNote} onAddTag={addTag} availableTags={tags} />} />
-        <Route path='https://:id' element={<NoteLayout notes={notesWithTags} />}>
+        <Route path='/' element={<NoteList notes={notesWithTags} availableTags={tags} onUpdateTag={updateTag} onDeleteTag={deleteTag} />} />
+        <Route path='/new' element={<NewNote onSubmit={onCreateNote} onAddTag={addTag} availableTags={tags} />} />
+        <Route path='/:id' element={<NoteLayout notes={notesWithTags} />}>
           <Route index element={<Note onDelete={onDeleteNote} />} />
           <Route path='edit' element={<EditNote onSubmit={onUpdateNote} onAddTag={addTag} availableTags={tags} />} />
 

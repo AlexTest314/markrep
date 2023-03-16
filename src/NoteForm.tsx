@@ -28,7 +28,7 @@ export function NoteForm({ onSubmit, onAddTag, availableTags, title = '', markdo
 
 		})
 
-		navigate('https://')
+		navigate('/')
 
 	}
 	return (
@@ -71,7 +71,7 @@ export function NoteForm({ onSubmit, onAddTag, availableTags, title = '', markdo
 				</Form.Group>
 				<Stack direction="horizontal" gap={2} className='justify-content-end'>
 					<Button type='submit' variant="primary">Save</Button>
-					<Link to='https://' >
+					<Link to='/' >
 						<Button type='button' variant="outline-secondary">Cancel</Button>
 					</Link>
 				</Stack>

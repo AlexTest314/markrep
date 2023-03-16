@@ -27,15 +27,15 @@ export function Note({ onDelete }: NoteProps) {
 			</Col>
 			<Col xs="auto">
 				<Stack gap={2} direction="horizontal">
-					<Link to={`https://${note.id}/edit`}>
+					<Link to={`/${note.id}/edit`}>
 						<Button variant="primary">Edit</Button>
 					</Link>
 					<Button onClick={() => {
 						onDelete(note.id)
-						navigate('https://')
+						navigate('/')
 					}} variant="outline-danger">Delete</Button>
-					<Link to='https://'>
-						<Button variant="outline-secondary">Back</Button>\
+					<Link to='/'>
+						<Button variant="outline-secondary">Back</Button>
 					</Link>
 				</Stack>
 
